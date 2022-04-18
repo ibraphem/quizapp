@@ -1,6 +1,6 @@
-import React, { useReducer, useState } from "react";
+import React, {useState } from "react";
 import QuestionCard from "./components/QuestionCard";
-import { fetchQuizQuestions, Difficulty, QuestionState } from "./API";
+import { fetchQuizQuestions, QuestionState } from "./API";
 import { GlobalStyles, Wrapper } from "./components/styled/App.Styles";
 import QuizStarter from "./components/QuizStarter";
 import QuizResult from "./components/QuizResult";
@@ -27,19 +27,11 @@ const App = () => {
   const [setUp, setSetUp] = useState({name:"", category:"", difficulty:""})
   // const state = useQuizSettings() 
 
-
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSetUp({...setUp, name: e.target.value})
-  }
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSetUp({...setUp, category: e.target.value})
   }
   const handleDifficultyChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSetUp({...setUp, difficulty: e.target.value})
-  }
-
-  const payload ={
-    quizSettings: setUp
   }
 
   const continueToQuiz = async(e:React.FormEvent) => {
