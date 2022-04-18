@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { QuizSettingsProvider } from './contextState.ts/Reducer';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <QuizSettingsProvider>
     <App />
-    </QuizSettingsProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

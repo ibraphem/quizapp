@@ -1,5 +1,3 @@
-import {useState} from "react";
-import { Dispatch } from "../contextState.ts/Reducer";
 import { FormStyle } from "./styled/FormStyle";
 import { Wrapper } from "./styled/QuestionCard.Styles";
 
