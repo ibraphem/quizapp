@@ -12,7 +12,7 @@ const QuizResult: React.FC<QuizResultProps> = ({score, tryQuizAgain}) => {
         <Wrapper>
             <p className="score">Score: {score}</p>
             <div>
-                <img src={ThumbsUp} alt="thumbs up" style={{width: '100%', height:'250px'}}/>
+                <img src={ThumbsUp} alt="thumbs up" style={{width: '100%', height:'200px'}}/>
             </div>
             <button className="next" onClick={tryQuizAgain}>
                 Try Again
